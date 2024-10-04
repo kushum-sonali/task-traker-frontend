@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 // Async thunk to fetch todos from the backend
 export const fetchTodos = createAsyncThunk("todos/fetchTodos", async (createdBy) => {
   console.log(createdBy);
-  const response = await fetch(`http://localhost:3000/tasks/${createdBy}`, {
+  const response = await fetch(`https://task-traker-backend.vercel.app//tasks/${createdBy}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -19,7 +19,7 @@ return data.result; // Assuming the backend sends the data as an array of todosi
 
 // Async thunk to delete a todo from the backend
 export const deleteTodoFromDB = createAsyncThunk("todos/deleteTodo", async (id) => {
-  await fetch(`http://localhost:3000/deletetask/${id}`, {
+  await fetch(`https://task-traker-backend.vercel.app/deletetask/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -30,7 +30,7 @@ export const deleteTodoFromDB = createAsyncThunk("todos/deleteTodo", async (id) 
 
 // Async thunk to add a todo to the backend
 export const addTodoToDB = createAsyncThunk("todos/addTodo", async (todo) => {
-  const response = await fetch("http://localhost:3000/addtask", {
+  const response = await fetch("https://task-traker-backend.vercel.app/addtask", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -49,7 +49,7 @@ export const addTodoToDB = createAsyncThunk("todos/addTodo", async (todo) => {
 
 // Async thunk to update a todo on the backend
 export const updateTodoInDB = createAsyncThunk("todos/updateTodo", async ({ id, title, desc }) => {
-  const response = await fetch(`http://localhost:3000/updatetask/${id}`, {
+  const response = await fetch(`https://task-traker-backend.vercel.app/updatetask/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -69,7 +69,7 @@ export const updateTodoInDB = createAsyncThunk("todos/updateTodo", async ({ id, 
   return { id, title: data.task.title, desc: data.task.desc }; // Return the updated task
 });
 export const completedTodoInDb=createAsyncThunk("todos/completedTodo",async(id)=>{
-  const response= await fetch(`http://localhost:3000/task/completed/${id}`,{
+  const response= await fetch(`https://task-traker-backend.vercel.app/task/completed/${id}`,{
     method:'POST',
     headers:{
       'Content-Type':'application/json'

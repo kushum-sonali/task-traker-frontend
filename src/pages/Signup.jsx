@@ -39,7 +39,7 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const result = await fetch('http://localhost:3000/signup', {
+      const result = await fetch('https://task-traker-backend.vercel.app/signup', {
         method: 'POST',
         body: JSON.stringify({ fullName, email, phone, password }),
         headers: {
