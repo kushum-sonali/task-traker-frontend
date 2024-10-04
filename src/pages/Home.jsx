@@ -13,11 +13,11 @@ function Home() {
   const dispatch= useDispatch();
   console.log("home data",user);
 
-  // useEffect(()=>{
-  //   if(!user){
-  //    navigate('/login')
-  //   }
-  // },[user])
+  useEffect(()=>{
+    if(!user){
+     navigate('/login')
+    }
+  },[user])
 
   return (
     <div className="bg-custom-gradient h-screen w-full text-white flex flex-col">
