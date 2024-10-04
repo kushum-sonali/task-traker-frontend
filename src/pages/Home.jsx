@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import { logout } from '/store/userSlice';
+import { logout } from '../../store/UserSlice';
 import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 

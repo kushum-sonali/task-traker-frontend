@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { useSelector, useDispatch } from 'react-redux';
-import { login } from '/store/userSlice';
+import { login } from '../../store/UserSlice';
 import { Label } from '@/src/components/ui/label';
 import { motion } from 'framer-motion'; // Import Framer Motion
 

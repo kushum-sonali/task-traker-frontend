@@ -4,11 +4,8 @@ import {Button}from '@/components/ui/button';
 import {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { addTodo} from '/store/todoSlice';
 import { useSelector } from 'react-redux';
-import { toast } from 'react-toastify';
 import { Textarea } from '@/src/components/ui/textarea';
-import { nanoid } from 'nanoid';
 import { addTodoToDB } from '../../store/TodoSlice';
 
 const getCurrentDate = () => {
