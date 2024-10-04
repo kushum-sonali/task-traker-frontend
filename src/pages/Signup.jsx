@@ -8,7 +8,7 @@ import { Label } from '@/src/components/ui/label';
 import { useSelector } from 'react-redux';
 import { signInWithPopup } from 'firebase/auth';
 import { auth, provider } from '../../tododataConfig'
-import { login } from '/store/userSlice';
+import { login } from '../../store/UserSlice';
 import { useDispatch } from 'react-redux';
 import { motion } from 'framer-motion'; // Import Framer Motion
 
