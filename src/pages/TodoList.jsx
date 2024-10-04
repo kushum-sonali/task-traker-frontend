@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchTodos, deleteTodoFromDB, updateTodoInDB, toggleComplete ,completedTodoInDb} from "/store/todoSlice"; // Adjust the import path as needed
+import { fetchTodos, deleteTodoFromDB, updateTodoInDB, toggleComplete ,completedTodoInDb} from "../../store/TodoSlice"; // Adjust the import path as needed
 import { useNavigate } from "react-router-dom";
 
 function TodoList() {
