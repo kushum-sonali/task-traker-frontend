@@ -61,7 +61,7 @@ function Signup() {
   };
 
   const googleSubmit = async (userToSave) => {
-    const result = await fetch('http://localhost:3000/firebaseuser', {
+    const result = await fetch('https://task-traker-backend.vercel.app/firebaseuser', {
       method: 'POST',
       body: JSON.stringify({
         fullName: userToSave.fullName,
